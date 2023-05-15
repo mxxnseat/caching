@@ -3,7 +3,7 @@ import { Redis } from 'ioredis';
 import { REDIS_CLIENT } from 'src/lib/redis/redis.constants';
 import * as crypto from 'node:crypto';
 
-export const Cachable = (
+export const Cacheable = (
   {
     ttl,
     identifier,

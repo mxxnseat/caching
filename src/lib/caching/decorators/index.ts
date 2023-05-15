@@ -1,1 +1,1 @@
-export * from './cachable.decorator';
+export * from './cacheable.decorator';

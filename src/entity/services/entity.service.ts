@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Cachable } from 'src/lib/caching/decorators/cachable.decorator';
+import { Cacheable } from 'src/lib/caching/decorators';
 import { EntityRepository, IEntity } from '../repositories';
 
 @Injectable()
@@ -8,7 +8,7 @@ export class EntityService {
   public create(name: string): IEntity {
     return this._entityRepository.create(name);
   }
-  @Cachable()
+  @Cacheable()
   public async retrieve(
     id: string,
     options?: Record<string, unknown>,
