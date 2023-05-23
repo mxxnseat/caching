@@ -1,11 +1,11 @@
 import { Global, Module } from '@nestjs/common';
-import { InvalidateCacheHandler } from './commands/handlers';
-import { InvalidateCacheSaga } from './sagas';
+import { CachingController } from './controllers/caching.controller';
 import { CachingService } from './services';
 
 @Global()
 @Module({
-  providers: [CachingService, InvalidateCacheHandler, InvalidateCacheSaga],
+  controllers: [CachingController],
+  providers: [CachingService],
   exports: [CachingService],
 })
 export class CachingModule {}
